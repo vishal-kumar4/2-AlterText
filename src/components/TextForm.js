@@ -1,18 +1,14 @@
 import React, {useState} from 'react'
 
-
 export default function TextForm(props) {
-    
     const handleLoClick = ()=>{ 
         let newText = text.toLowerCase();
         setText(newText)
         props.showAlert("Converted to lowercase!", "success");
     }
 
-
     const handleUpClick = ()=>{
-        let newText = text.toUpperCase();
-        setText(newText)
+        setText(text.toUpperCase())
         props.showAlert("Converted to uppercase!", "success");
     }
 
@@ -23,8 +19,7 @@ export default function TextForm(props) {
     }
 
     const handleClearClick = ()=>{ 
-        let newText = '';
-        setText(newText);
+        setText(' ');
         props.showAlert("Text Cleared!", "success");
     }
 
